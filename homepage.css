@@ -1,0 +1,54 @@
+body{
+    background-color:#FDF3D8 ;
+}
+nav{
+    font-size: 1.5rem;
+}
+.HomepageSection{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+#firstHomepageSection {
+    background-color:#FDF3D8 ;   
+}
+.halfbox{
+    text-align: left;
+    width: 45%;
+    margin-left: 2rem;
+}
+.imageContainer{
+    justify-content: center;
+}
+.sectionMsg{
+    text-align: left;
+    font-size: 4rem;
+}
+.SectionButton{
+    margin-top: 1rem;
+    min-width: 35%;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: medium solid black;
+    padding: 2px 10px 2px 10px;
+    color: #ffe435e4;
+    background-color: #F15E5C;
+}
+.SectionButton:hover{
+    box-shadow: 0px 5px 5px #c54744;
+    transition:ease-out .1s;
+    cursor:pointer;
+}
+.sectionImage{
+    width: 500px;
+    height: 500px;
+    margin-left: 2em;
+}
+/*
+#FDF3D8 
+#F15E5C
+#FCE165
+#FCE165
+#FCE165
+*/
