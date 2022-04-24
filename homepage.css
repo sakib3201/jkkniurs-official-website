@@ -1,62 +1,73 @@
-body{
-    background-color:#FDF3D8 ;
+body {
+    background-color: #fdf3d8;
     margin: 0px;
     padding: 0px;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
     align-items: center;
     padding: 0px 4rem;
 }
-header a{
+
+header a {
     color: black;
     text-decoration: underline;
 }
-header a:hover{
-    color: #207CA2;
+
+header a:hover {
+    color: #207ca2;
     text-decoration: none;
-    border:#207CA2;
+    border: #207ca2;
     border-style: solid;
     border-radius: 10%;
-    transition: .15s;
+    transition: 0.15s;
 }
-nav{
+
+nav {
     text-decoration: none;
 }
-nav li{
+
+nav li {
     display: inline-block;
     padding: 0px 20px;
 }
-.HomepageSection{
+
+.HomepageSection {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 #firstHomepageSection {
-    background-color:#FDF3D8 ;   
+    background-color: #fdf3d8;
 }
-#secondHomepageSection{
-    background-color:#CEE8F6 ;
+
+#secondHomepageSection {
+    background-color: #cee8f6;
 }
-#thirdHomepageSection{
-    background-color: #FDF3D8;
+
+#thirdHomepageSection {
+    background-color: #fdf3d8;
 }
 .halfbox{
     text-align: left;
     width: 45%;
     margin-left: 2rem;
 }
-.imageContainer{
+
+.imageContainer {
     text-align: center;
 }
-.sectionMsg{
+
+.sectionMsg {
     text-align: left;
     font-size: 4rem;
 }
-.SectionButton{
+
+.SectionButton {
     margin-top: 1rem;
     min-width: 35%;
     font-size: 2rem;
@@ -66,23 +77,27 @@ nav li{
     color: #ffe435e4;
     font-style: italic;
 }
-#firstSectionButton{
-    background-color: #F15E5C;
+
+#firstSectionButton {
+    background-color: #f15e5c;
 }
-#secondSectionButton{
-    background-color: #207CA2;
+
+#secondSectionButton {
+    background-color: #207ca2;
 }
-#thirdSectionButton{
-    background-color: #F15E5C;
+
+#thirdSectionButton {
+    background-color: #f15e5c;
 }
 .SectionButton:hover {
     color: bisque;
     box-shadow: 0px 5px 5px slategray;
-    transition:ease-out .1s;
-    cursor:pointer;
-    text-decoration:dotted;
+    transition: ease-out 0.1s;
+    cursor: pointer;
+    text-decoration: dotted;
 }
-.sectionImage{
+
+.sectionImage {
     width: 500px;
     height: 500px;
     margin-left: 2em;
