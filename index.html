@@ -16,19 +16,23 @@
   </head>
 
   <body>
+    <header>
+    <a href="">Home</a>  
     <nav>
-      <a href="">Home</a>
-      <a href="">Articles</a>
-      <a href="">Learn</a>
-      <a href="">Events</a>
-      <a href="">About Us</a>
-      <a href="">Contact</a>
+      <ul>
+      <li><a href="">Articles</a></li>
+      <li><a href="">Learn</a></li>
+      <li><a href="">Events</a></li>
+      <li><a href="">About Us</a></li>
+    </ul>
     </nav>
+    <a href="">Contact</a>
+    </header>
 
     <section class="HomepageSection" id="firstHomepageSection">
       <section class="halfbox">
         <p class="sectionMsg">Research for<br/>Enriching Knowledge</p>
-        <button class="SectionButton">Articles</button>
+        <button class="SectionButton" id="firstSectionButton">Articles</button>
       </section>
       <section class="halfbox">
         <section class="imageContainer">
@@ -41,20 +45,37 @@
       </section>
     </section>
 
-    <section class="HomepageSection" id="SecondHomepageSection">
+    <section class="HomepageSection" id="secondHomepageSection">
         <section class="halfbox">
             <section class="imageContainer">
               <img
-                src="/graphic assets/jkkniursLogo.svg"
+                src="/graphic assets/bookReading.svg"
                 alt="jkkniursLogo"
                 class="sectionImage"
               />
             </section>
           </section>
         <section class="halfbox">
-          <p class="sectionMsg">Research for<br/>Enriching Knowledge</p>
-          <button class="SectionButton">Articles</button>
+          <p class="sectionMsg">From Beginning to end Learn Everything about research</p>
+          <button class="SectionButton" id="secondSectionButton">Learn</button>
         </section>
       </section>
+
+      <section class="HomepageSection" id="thirdHomepageSection">
+        <section class="halfbox">
+          <p class="sectionMsg">Stay Up to Date with our recent events</p>
+          <button class="SectionButton" id="thirdSectionButton">Events</button>
+        </section>
+        <section class="halfbox">
+          <section class="imageContainer">
+            <img
+              src="/graphic assets/dataanalysis.svg"
+              alt="jkkniursLogo"
+              class="sectionImage"
+            />
+          </section>
+        </section>
+      </section>
+
   </body>
 </html>
