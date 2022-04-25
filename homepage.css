@@ -41,6 +41,7 @@ nav li {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 #firstHomepageSection {
     background-color: #fdf3d8;
 }
@@ -52,7 +53,8 @@ nav li {
 #thirdHomepageSection {
     background-color: #fdf3d8;
 }
-.halfbox{
+
+.halfbox {
     text-align: left;
     width: 45%;
     margin-left: 2rem;
@@ -65,16 +67,17 @@ nav li {
 .sectionMsg {
     text-align: left;
     font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 .SectionButton {
     margin-top: 1rem;
-    min-width: 35%;
+    max-width: 35%;
     font-size: 2rem;
     border-radius: 10px;
     border: medium solid black;
     padding: 2px 10px 2px 10px;
-    color: #ffe435e4;
+    color: black; /*#ffe435;*/
     font-style: italic;
 }
 
@@ -83,14 +86,15 @@ nav li {
 }
 
 #secondSectionButton {
-    background-color: #207ca2;
+    background-color: #6ABEE2;
 }
 
 #thirdSectionButton {
     background-color: #f15e5c;
 }
+
 .SectionButton:hover {
-    color: bisque;
+    color: aliceblue;
     box-shadow: 0px 5px 5px slategray;
     transition: ease-out 0.1s;
     cursor: pointer;
@@ -102,10 +106,74 @@ nav li {
     height: 500px;
     margin-left: 2em;
 }
-/*
-#FDF3D8 
-#F15E5C
-#FCE165
-#FCE165
-#FCE165
-*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 1rem;
+        padding: 0px 0px;
+    }
+    nav ul{
+        padding-inline-start: 0px;
+    }
+    nav li {
+        display: inline-block;
+        padding: 0px 0px;
+    }
+    .halfbox{
+        width: 80%;
+        margin-left: 0rem;
+        text-align: center;
+    }
+    .sectionImage {
+        width: 200px;
+        height: 200px;
+        margin-left: 0px;
+    }
+    .sectionMsg {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: .25rem;
+    }
+    .SectionButton{
+        font-size: 1.2rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    header {
+        font-size: 1rem;
+        padding: 0px .2rem;
+    }
+    nav ul{
+        padding-inline-start: 0px;
+    }
+    nav li {
+        display: inline-block;
+        padding: 0px 0px;
+    }
+    .halfbox{
+        width: 90%;
+        margin-left: 0rem;
+        text-align: center;
+    }
+    .sectionImage {
+        width: 300px;
+        height: 300px;
+        margin-left: 0px;
+    }
+    
+    .sectionMsg {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 1rem;
+    }
+    .SectionButton{
+        font-size: 1.5rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+}
