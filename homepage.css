@@ -2,6 +2,7 @@ body {
   background-color: #fdf3d8;
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 header {
@@ -9,22 +10,30 @@ header {
   justify-content: space-between;
   font-size: 1.5rem;
   align-items: center;
-  padding: 0px 4rem;
+  padding: 2rem 4rem;
+  height: 2rem;
 }
 
 header a {
   color: black;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 3px solid black;
   display: inline-block;
 }
 
 header a:hover {
-  color: #207ca2;
+  color: black;
+  background-color: #6abee2;
   text-decoration: none;
-  border: #207ca2;
+  border: darkslategray;
   border-style: solid;
-  border-radius: 10%;
-  transition: 0.15s;
+  border-radius: 25px;
+  transition: 0.25s ease-out;
+  font-size: 1.1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 4px 4px 4px black;
+
 }
 
 nav {
@@ -80,6 +89,8 @@ nav li {
   padding: 2px 10px 2px 10px;
   color: black; /*#ffe435;*/
   font-style: italic;
+  box-shadow: 2px 0px 5px slategray;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #firstSectionButton {
@@ -106,6 +117,24 @@ nav li {
   width: 500px;
   height: 500px;
   margin-left: 2em;
+}
+
+footer{
+  display: flex;
+  background-color: darkslategray;
+  color: snow;
+  justify-content: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: none;
+}
+footer>div{
+  width: 50%;
+  text-align: center;
+}
+footer>div>h5{
+  text-decoration: underline;
+  font-size: 1rem;
 }
 
 /* Extra small devices (phones, 600px and down) */
