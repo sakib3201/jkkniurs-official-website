@@ -8,6 +8,7 @@ import Link from 'next/link'
 
 const pages = [
   { name: 'Home', href: '/' },
+  { name: 'Articles', href: '#' },
   { name: 'Event', href: '#' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '#' },
@@ -32,11 +33,11 @@ export default function Navigation() {
 
           {/* Logo */}
           <div className="flex lg:flex-1">
-            <Link href="/" className="-m-2.5">
+            <Link href={pages[0].href} className="-m-2.5">
               <div className="flex flex-col">
                 <Image
                   className="h-8 w-auto"
-                  src="/jkkniursLogo-cropped.svg"
+                  src="logo/jkkniursLogo-cropped.svg"
                   alt="Logo"
                   width={32}
                   height={32}
@@ -46,7 +47,6 @@ export default function Navigation() {
                   <p className="text-[5px] -mt-1 font-bold">Research Society</p>
                 </div>
               </div>
-
             </Link>
           </div>
 
@@ -94,13 +94,19 @@ export default function Navigation() {
             <DialogPanel transition className="fixed pointer-events-auto max-w-md transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700  inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
                 <Link href={pages[0].href} className="-m-2.5" onClick={() => setMobileMenuOpen(false)}>
-                  <Image
-                    className="h-12 w-auto"
-                    src="/jkkniursLogo.svg"
-                    alt="Logo"
-                    width={898}
-                    height={898}
-                  />
+                    <div className="flex flex-col">
+                      <Image
+                        className="h-8 w-auto"
+                        src="logo/jkkniursLogo-cropped.svg"
+                        alt="Logo"
+                        width={32}
+                        height={32}
+                      />
+                      <div className="text-center">
+                        <h1 className="text-[12px] font-bold">JKKNIU</h1>
+                        <p className="text-[5px] -mt-1 font-bold">Research Society</p>
+                      </div>
+                    </div>
                 </Link>
                 <button
                   type="button"
