@@ -14,7 +14,7 @@ export default function ArticlesSection() {
           <Link href="#">
             <button
               type="button"
-              className="mt-4 rounded-full bg-red-400 px-5 py-2 text-center text-lg font-bold text-[#fefae0] hover:bg-[#fefae0] hover:text-[#264653]"
+              className="mt-4 rounded-full bg-red-400 px-5 py-2 text-center text-lg font-bold text-[#fefae0] hover:bg-[#fefae0] hover:text-[#264653] active:bg-[#fefae0] active:text-[#264653]"
             >
               Articles
             </button>
