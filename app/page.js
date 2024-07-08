@@ -1,10 +1,20 @@
 import HeroSection from "./homepage/hero";
-import Footer from "./footer/footer";
+import ArticlesSection from "./homepage/articlesSection";
+import EventsSection from "./homepage/eventsSection";
+import Wave from "@/public/illustrations/waves";
 export default function Home() {
   return (
     <div>
-      <HeroSection />
-      <div className="flex justify-center bg-indigo-300 p-10">Home Page</div>
+      <section>
+        <HeroSection />
+      </section>
+      <section>
+        <ArticlesSection />
+      </section>
+      <section>
+        {/* <EventsSection /> */}
+      </section>
+      {/* <Wave className={"-mt-0.5 -mb-0.5"} /> */}
     </div>
   );
 }
