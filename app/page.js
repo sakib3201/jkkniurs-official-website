@@ -12,9 +12,9 @@ export default function Home() {
         <ArticlesSection />
       </section>
       <section>
-        {/* <EventsSection /> */}
+        <EventsSection />
       </section>
-      {/* <Wave className={"-mt-0.5 -mb-0.5"} /> */}
+      <Wave className={"-mt-0.5 -mb-0.5"} />
     </div>
   );
 }

@@ -18,7 +18,7 @@ const links = {
 
 export default function Footer() {
   return (
-    <section className="bg-gray-300"> {/* [#264653] */}
+    <section className="bg-[#264653]">
       <div className="mx-auto w-screen space-y-8 overflow-hidden px-4 py-12 sm:px-6 lg:mb-16 lg:px-8">
         <div className="flex justify-center space-x-4 md:space-x-8">
           <Link href={links.facebook} target="_blank" className={linkClass}>
