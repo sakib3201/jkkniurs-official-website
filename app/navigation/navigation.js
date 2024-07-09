@@ -71,7 +71,7 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`underline-effect text-sm leading-6 ${isLinkActive(item.href) ? "active-link" : ""}`}
+                className={`underline-effect text-lg leading-6 ${isLinkActive(item.href) ? "active-link" : ""}`}
               >
                 {item.name}
               </Link>
@@ -83,7 +83,7 @@ export default function Navigation() {
             <Link href={loginPage.href}>
               <button
                 type="button"
-                className="relative rounded-full bg-red-400 px-3 py-1 text-center text-sm font-bold text-white hover:bg-[#264653] active:bg-[#264653]"
+                className="relative rounded-full bg-red-400 px-5 py-2 text-center text-sm font-bold text-white hover:bg-[#264653] active:bg-[#264653]"
               >
                 {loginPage.name}
               </button>

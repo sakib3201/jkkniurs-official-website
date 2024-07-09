@@ -156,12 +156,12 @@ export default function ArticlesSectionIllustration({ className }) {
       <clipPath id="b">
         <use xlinkHref="#a" overflow="visible" />
       </clipPath>
-      <g clip-path="url(#b)">
+      <g clipPath="url(#b)">
         <path fill="#FC9F95" d="M396.8 187.2h17.9v110h-17.9z" />
         <path fill="#FCCFCA" d="M429 172.7h17.9V298H429z" />
         <path fill="#FC9F95" d="M461.2 157.1h17.9V296h-17.9z" />
       </g>
-      <g fill="#ECECEC" clip-path="url(#b)">
+      <g fill="#ECECEC" clipPath="url(#b)">
         <path d="m459.119 136.105.67 2.096-82.106 26.265-.67-2.095z" />
         <path d="m454 146.7-1.8-1.3 5.4-7.6-7.8-2.7.7-2.1 8.6 3c.5.1.9.5 1 1 .2.5 0 1.1-.3 1.5l-5.8 8.2zm4.4-8.6c.1 0 .1 0 0 0zm-.3-1s0 .1 0 0z" />
       </g>
