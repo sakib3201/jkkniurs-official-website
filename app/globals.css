@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #fefae0;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .underline-effect {
+    @apply relative font-bold tracking-[1px] text-gray-600 hover:text-black;
+  }
+  .underline-effect::after {
+    @apply absolute -bottom-[5px] left-0 h-[4px] w-[0%] rounded-xl bg-red-400 duration-300 content-[''];
+  }
+  .underline-effect:hover::after {
+    @apply w-full;
+  }
+  .active-link {
+    @apply text-black;
+  }
+  .active-link::after {
+    @apply absolute -bottom-[5px] left-0 h-[4px] w-full rounded-xl bg-red-400 content-[''];
+  }
+}
