@@ -2,7 +2,6 @@ import Slider from "./slider";
 export default function Hero() {
   return (
     <div>
-      <div className="mt-5">
         <div className="mb-4 flex flex-col">
           <Slider />
           <div>
@@ -14,6 +13,5 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
