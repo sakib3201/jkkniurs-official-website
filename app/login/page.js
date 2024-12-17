@@ -18,7 +18,7 @@ export default function Login() {
       email,
       password,
     };
-    console.log("Form Submitted:", formData);
+    // console.log("Form Submitted:", formData);
 
     // API call here
   };

@@ -47,12 +47,12 @@ export default function Register() {
         phone: e.target.phone.value,
         password,
       };
-      console.log("Form Submitted:", formData);
+      // console.log("Form Submitted:", formData);
 
       // API CALL HERE
       
     } else {
-      console.error("Form validation failed");
+      // console.error("Form validation failed");
     }
   };
 
