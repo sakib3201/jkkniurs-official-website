@@ -14,7 +14,7 @@ const pages = [
   { name: "Contact", href: "#" },
 ];
 
-const loginPage = { name: "Log in", href: "#" };
+const loginPage = { name: "Log in", href: "/login" };
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,10 +24,10 @@ export default function Navigation() {
   const isLinkActive = (path) => {
     return path === pathname;
   };
-
+  
   return (
     <div>
-      <header className="absolute inset-x-0 top-0 z-50">
+      <header className="absolute inset-x-0 top-0 z-50 bg-[#fefae0]">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
