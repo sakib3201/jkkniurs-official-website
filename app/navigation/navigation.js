@@ -11,7 +11,7 @@ const pages = [
   { name: "Articles", href: "#" },
   { name: "Event", href: "#" },
   { name: "About", href: "/about" },
-  { name: "Contact", href: "#" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const loginPage = { name: "Log in", href: "/login" };
