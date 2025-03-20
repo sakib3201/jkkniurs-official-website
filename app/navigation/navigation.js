@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const pages = [
   { name: "Home", href: "/" },
-  { name: "Articles", href: "#" },
+  { name: "Articles", href: "/articles" },
   { name: "Event", href: "/events" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
