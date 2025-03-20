@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -93,71 +93,69 @@ export default function About() {
     }
   ];
 
-  // Alumni grouped by fiscal years
-  const alumniByYear = {
-    "2023-2024": [
-      {
-        id: 1,
-        name: "Dr. Zainab Hossain",
-        designation: "Former President",
-        image: "https://i.pravatar.cc/300?img=2",
-        department: "Physics",
-        currentPosition: "Professor at Oxford University",
-        email: "zainab.hossain@example.com",
-        socialLinks: {
-          linkedin: "https://linkedin.com/in/example7",
-          twitter: "https://twitter.com/example7",
-          researchGate: "https://researchgate.net/profile/example7"
-        }
-      },
-      {
-        id: 2,
-        name: "Prof. Imran Kadir",
-        designation: "Former Secretary",
-        image: "https://i.pravatar.cc/300?img=4",
-        department: "Mathematics",
-        currentPosition: "Researcher at NASA",
-        email: "imran.kadir@example.com",
-        socialLinks: {
-          linkedin: "https://linkedin.com/in/example8",
-          twitter: "https://twitter.com/example8",
-          researchGate: "https://researchgate.net/profile/example8"
-        }
+  // Alumni with fiscal year as a direct property
+  const alumni = [
+    {
+      id: 1,
+      name: "Dr. Zainab Hossain",
+      designation: "Former President",
+      image: "https://i.pravatar.cc/300?img=2",
+      department: "Physics",
+      currentPosition: "Professor at Oxford University",
+      email: "zainab.hossain@example.com",
+      fiscal_year: "2023-2024",
+      socialLinks: {
+        linkedin: "https://linkedin.com/in/example7",
+        twitter: "https://twitter.com/example7",
+        researchGate: "https://researchgate.net/profile/example7"
       }
-    ],
-    "2022-2023": [
-      {
-        id: 3,
-        name: "Dr. Laila Begum",
-        designation: "Former Executive Member",
-        image: "https://i.pravatar.cc/300?img=6",
-        department: "Computer Science",
-        currentPosition: "CTO at Tech Innovators Inc.",
-        email: "laila.begum@example.com",
-        socialLinks: {
-          linkedin: "https://linkedin.com/in/example9",
-          twitter: "https://twitter.com/example9",
-          researchGate: "https://researchgate.net/profile/example9"
-        }
+    },
+    {
+      id: 2,
+      name: "Prof. Imran Kadir",
+      designation: "Former Secretary",
+      image: "https://i.pravatar.cc/300?img=4",
+      department: "Mathematics",
+      currentPosition: "Researcher at NASA",
+      email: "imran.kadir@example.com",
+      fiscal_year: "2023-2024",
+      socialLinks: {
+        linkedin: "https://linkedin.com/in/example8",
+        twitter: "https://twitter.com/example8",
+        researchGate: "https://researchgate.net/profile/example8"
       }
-    ],
-    "2021-2022": [
-      {
-        id: 4,
-        name: "Dr. Rafiq Islam",
-        designation: "Former Vice President",
-        image: "https://i.pravatar.cc/300?img=8",
-        department: "Biology",
-        currentPosition: "Head of Research at Global Pharma",
-        email: "rafiq.islam@example.com",
-        socialLinks: {
-          linkedin: "https://linkedin.com/in/example10",
-          twitter: "https://twitter.com/example10",
-          researchGate: "https://researchgate.net/profile/example10"
-        }
+    },
+    {
+      id: 3,
+      name: "Dr. Laila Begum",
+      designation: "Former Executive Member",
+      image: "https://i.pravatar.cc/300?img=6",
+      department: "Computer Science",
+      currentPosition: "CTO at Tech Innovators Inc.",
+      email: "laila.begum@example.com",
+      fiscal_year: "2022-2023",
+      socialLinks: {
+        linkedin: "https://linkedin.com/in/example9",
+        twitter: "https://twitter.com/example9",
+        researchGate: "https://researchgate.net/profile/example9"
       }
-    ]
-  };
+    },
+    {
+      id: 4,
+      name: "Dr. Rafiq Islam",
+      designation: "Former Vice President",
+      image: "https://i.pravatar.cc/300?img=8",
+      department: "Biology",
+      currentPosition: "Head of Research at Global Pharma",
+      email: "rafiq.islam@example.com",
+      fiscal_year: "2021-2022",
+      socialLinks: {
+        linkedin: "https://linkedin.com/in/example10",
+        twitter: "https://twitter.com/example10",
+        researchGate: "https://researchgate.net/profile/example10"
+      }
+    }
+  ];
 
   const advisors = [
     {
@@ -201,8 +199,19 @@ export default function About() {
     }
   ];
 
+  // Get unique fiscal years from alumni
+  const fiscalYears = useMemo(() => {
+    const years = [...new Set(alumni.map(member => member.fiscal_year))];
+    return years.sort().reverse(); // Sort in reverse to get most recent first
+  }, [alumni]);
+
   // Selected year state for alumni
-  const [selectedAlumniYear, setSelectedAlumniYear] = useState(Object.keys(alumniByYear)[0]);
+  const [selectedAlumniYear, setSelectedAlumniYear] = useState(fiscalYears[0] || "");
+
+  // Filter alumni by selected fiscal year
+  const filteredAlumni = useMemo(() => {
+    return alumni.filter(member => member.fiscal_year === selectedAlumniYear);
+  }, [alumni, selectedAlumniYear]);
 
   // Improved member card component
   const MemberCard = ({ member }) => {
@@ -348,7 +357,7 @@ export default function About() {
                   <span>Select Year</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {Object.keys(alumniByYear).map(year => (
+                  {fiscalYears.map(year => (
                     <button
                       key={year}
                       onClick={() => setSelectedAlumniYear(year)}
@@ -372,7 +381,7 @@ export default function About() {
               </div>
               
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {alumniByYear[selectedAlumniYear].map(member => (
+                {filteredAlumni.map(member => (
                   <MemberCard key={member.id} member={member} />
                 ))}
               </div>
